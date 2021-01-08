@@ -36,3 +36,10 @@ if(!localStorage.getItem('name')) {
 myButton.onclick = function() {
   setUserName();
 }
+
+function myFunction1() {
+  var x = document.getElementById("myNumber1").value;
+  var y=document.getElementById("myNumber2").value;
+  var z=x*y;
+document.getElementById("demo").innerHTML = z;
+}
