@@ -1,46 +1,29 @@
 <!DOCTYPE html>
 <html>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>Mozilla is cool</h1>
+    <h2> Answer is, </h2>
+    <img src="images/firefox-icon.png" alt="The Firefox logo: a flaming fox surrounding the Earth.">
 
-<p><b>Your Dummy Calculator</b></p>
+    <p>At Mozilla, we’re a global community of</p>
 
-First Number: <input type="number" id="myNumber1" value="1">
-Second Number:<input type="number" id="myNumber2" value="2">
+    <ul> <!-- changed to list in the tutorial -->
+      <li>technologists</li>
+      <li>thinkers</li>
+      <li>builders</li>
+    </ul>
+    First Number: <input type="number" id="myNumber1" value="1">
+    Second Number:<input type="number" id="myNumber2" value="2">
 
+    <button id = "buttonChangeUser" class = "panelB" > Change user </button>
+<!-- <button id = "buttonMultipliar" class = "panelB" >Try Multiplication</butt --><!-- on> -->
 
-<button onclick="myFunction1()">Try Multiplication</button>
-<button onclick="myFunction2()">Try Division</button>
-<button onclick="myFunction3()">Try Subtraction</button>
-<button onclick="myFunction4()">Try Addition</button>
-
-<p id="demo"></p>
-
-<script>
-function myFunction1() {
-  var x = document.getElementById("myNumber1").value;
-  var y=document.getElementById("myNumber2").value;
-  var z=x*y;
-document.getElementById("demo").innerHTML = z;
-}
-function myFunction2() {
-  var x = document.getElementById("myNumber1").value;
-  var y=document.getElementById("myNumber2").value;
-  var z=x/y;
-document.getElementById("demo").innerHTML = z;
-}
-function myFunction3() {
-  var x = document.getElementById("myNumber1").value;
-  var y=document.getElementById("myNumber2").value;
-  var z=x-y;
-document.getElementById("demo").innerHTML = z;
-}
-function myFunction4() {
-  var x = document.getElementById("myNumber1").value;
-  var y=document.getElementById("myNumber2").value;
-  var z=parseFloat(x)+parseFloat(y);
-document.getElementById("demo").innerHTML = z;
-}
-</script>
-
-</body>
+  <script src="C:/Users/sahar/Desktop/scripts/main.js"></script>
+ </body>
 </html>
