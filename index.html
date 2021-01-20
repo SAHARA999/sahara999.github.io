@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>My test page</title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
-    <h1>Mozilla is cool</h1>
-    <img src="images/firefox-icon.png" alt="The Firefox logo: a flaming fox surrounding the Earth.">
+<body>
 
-    <p>At Mozilla, we’re a global community of</p>
+<p><b>Your Dummy Calculator</b></p>
 
-    <ul> <!-- changed to list in the tutorial -->
-      <li>technologists</li>
-      <li>thinkers</li>
-      <li>builders</li>
-    </ul>
+First Number: <input type="number" id="myNumber1" value="1">
+Second Number:<input type="number" id="myNumber2" value="2">
 
-    <p>Read the <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a> to learn even more about the values and principles that guide the pursuit of our mission.</p>
-    <button> Change user </button>
-  <script src="https://raw.githubusercontent.com/SAHARA999/sahara999.github.io/main/main.js"></script>
- </body>
+
+<button onclick="myFunction1()">Try Multiplication</button>
+<button onclick="myFunction2()">Try Division</button>
+<button onclick="myFunction3()">Try Subtraction</button>
+<button onclick="myFunction4()">Try Addition</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction1() {
+  var x = document.getElementById("myNumber1").value;
+  var y=document.getElementById("myNumber2").value;
+  var z=x*y;
+document.getElementById("demo").innerHTML = z;
+}
+function myFunction2() {
+  var x = document.getElementById("myNumber1").value;
+  var y=document.getElementById("myNumber2").value;
+  var z=x/y;
+document.getElementById("demo").innerHTML = z;
+}
+function myFunction3() {
+  var x = document.getElementById("myNumber1").value;
+  var y=document.getElementById("myNumber2").value;
+  var z=x-y;
+document.getElementById("demo").innerHTML = z;
+}
+function myFunction4() {
+  var x = document.getElementById("myNumber1").value;
+  var y=document.getElementById("myNumber2").value;
+  var z=parseFloat(x)+parseFloat(y);
+document.getElementById("demo").innerHTML = z;
+}
+</script>
+
+</body>
 </html>
