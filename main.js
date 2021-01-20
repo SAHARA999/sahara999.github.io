@@ -1,24 +1,27 @@
+'use strict';
+
 // Image switcher code
 
-let myImage = document.querySelector('img');
+var myImage = document.querySelector('img');
 
-myImage.onclick = function() {
-  let mySrc = myImage.getAttribute('src');
-  if(mySrc === 'images/firefox-icon.png') {
-    myImage.setAttribute ('src','images/firefox2.png');
+myImage.onclick = function () {
+  var mySrc = myImage.getAttribute('src');
+  if (mySrc === 'images/firefox-icon.png') {
+    myImage.setAttribute('src', 'images/firefox2.png');
   } else {
-    myImage.setAttribute ('src','images/firefox-icon.png');
+    myImage.setAttribute('src', 'images/firefox-icon.png');
   }
-}
+};
 
 // Personalized welcome message code
 
-let myButton = document.querySelector('button');
-let myHeading = document.querySelector('h1');
+var buttonChangeUser = document.querySelector('button');
+var buttonMultipliar = document.querySelector('button');
+var myHeading = document.querySelector('h1');
 
 function setUserName() {
-  let myName = prompt('Please enter your name.');
-  if(!myName) {
+  var myName = prompt('Please enter your name.');
+  if (!myName) {
     setUserName();
   } else {
     localStorage.setItem('name', myName);
@@ -26,14 +29,13 @@ function setUserName() {
   }
 }
 
-if(!localStorage.getItem('name')) {
+if (!localStorage.getItem('name')) {
   setUserName();
 } else {
-  let storedName = localStorage.getItem('name');
+  var storedName = localStorage.getItem('name');
   myHeading.innerHTML = 'Mozilla is cool, ' + storedName;
 }
 
-myButton.onclick = function() {
+buttonChangeUser.onclick = function () {
   setUserName();
-}
-
+};
